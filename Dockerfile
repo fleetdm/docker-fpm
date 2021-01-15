@@ -5,14 +5,15 @@ MAINTAINER Fleet Developers <engineering@fleetdm.com>
 # Adapted from the Dockerfile in FPM's repository:
 # https://github.com/jordansissel/fpm/blob/master/Dockerfile
 RUN apk add --no-cache \
-    ruby \
-    ruby-dev \
-    ruby-etc \
     gcc \
     libc-dev \
     libffi-dev \
     make \
     rpm \
+    ruby \
+    ruby-dev \
+    ruby-etc \
+    tar \
     && gem install --no-document fpm
 
 # Run as non-root user
